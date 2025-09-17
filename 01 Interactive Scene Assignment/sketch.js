@@ -8,13 +8,19 @@
 let canvaswidth = 950
 let canvaslength = 930
 
+//the location of the tree
+let PointX = 475
+let PointY = 465
+
 function setup() {
   createCanvas(canvaswidth, canvaslength);
+  background(135, 206, 235);
+  Scene();
 }
 
 function draw() {
-  background(135, 206, 235);
-  Scene()
+  
+
 }
 
 
@@ -28,12 +34,27 @@ function Scene() {
 
 
   //grass
-  fill(0,230,0)
-  circle(canvaswidth/2,2100, 3000)
+  fill(0,230,0);
+  circle(canvaswidth/2,2100, 3000);
 
-  //trees
-  fill(150, 75, 0)
-  rect(canvaslength/2,canvaslength/2,20,100)
-  triangle()
 
+  for(let Loop = 0;Loop < 10; Loop ++){
+    
+  
+    //gives me trees in random positions
+    PointX = random(0,canvaswidth)
+    PointY = random(500,canvaslength)
+
+    //tree trunk
+    fill(150, 75, 0);
+    rect(PointX-10,PointY,20,50);
+  
+    //the leaves
+    fill(0,150,0);
+    triangle(PointX-100,PointY,PointX+100,PointY,PointX,PointY-150);
+    triangle(PointX-90,PointY-50,PointX+90,PointY-50,PointX,PointY-200);
+    triangle(PointX-80,PointY-100,PointX+80,PointY-100,PointX,PointY-220);
+  
+  }
+  
 }
