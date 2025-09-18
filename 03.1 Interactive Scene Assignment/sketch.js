@@ -5,14 +5,14 @@
 
 
 
-let canvaswidth = 950
-let canvaslength = 930
+let canvaswidth = 950;
+let canvaslength = 930;
 
 //the location of the tree
-let PointX = 475
-let PointY = 465
+let PointX = 475;
+let PointY = 465;
 
-let Loop
+let Loop;
 
 function setup() {
   createCanvas(canvaswidth, canvaslength);
@@ -22,9 +22,6 @@ function setup() {
 
 function draw() {
   
-  if (keyPressed()){
-    Loop = 2
-  }
 }
 
 
@@ -48,8 +45,8 @@ function Scene() {
     
   
     //gives me trees in random positions
-    PointX = random(0,canvaswidth)
-    PointY = random(600,canvaslength)
+    PointX = random(0,canvaswidth);
+    PointY = random(600,canvaslength);
 
     //tree trunk
     fill(150, 75, 0);
@@ -63,4 +60,8 @@ function Scene() {
   
   }
   
+}
+
+function man(){
+  line
 }
