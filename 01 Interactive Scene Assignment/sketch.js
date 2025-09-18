@@ -12,6 +12,8 @@ let canvaslength = 930
 let PointX = 475
 let PointY = 465
 
+let Loop
+
 function setup() {
   createCanvas(canvaswidth, canvaslength);
   background(135, 206, 235);
@@ -20,7 +22,9 @@ function setup() {
 
 function draw() {
   
-
+  if (keyPressed()){
+    Loop = 2
+  }
 }
 
 
@@ -37,13 +41,15 @@ function Scene() {
   fill(0,230,0);
   circle(canvaswidth/2,2100, 3000);
 
-
-  for(let Loop = 0;Loop < 10; Loop ++){
+  // if (keyPressed()){
+  //   Loop = 2
+  // }
+  for(Loop = 0;Loop < 6; Loop ++){
     
   
     //gives me trees in random positions
     PointX = random(0,canvaswidth)
-    PointY = random(500,canvaslength)
+    PointY = random(600,canvaslength)
 
     //tree trunk
     fill(150, 75, 0);
